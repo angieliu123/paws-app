@@ -1,34 +1,12 @@
-:root {
-    --paws-cream: #fdf5e6;
-    --paws-brown: #4d3a2b;
-    --paws-orange: #f6b26b;
-}
-
-body {
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-}
-
-/* The Mobile Frame */
 .phone-frame {
     width: 375px;
     height: 812px;
-    background-color: var(--paws-cream);
-    border: 12px solid var(--paws-brown);
-    border-radius: 45px;
+    margin: auto;
+    border: 10px solid #4d3a2b;
+    border-radius: 40px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-
-.app-content {
-    height: calc(100% - 70px);
-    overflow-y: auto;
+    background: #fdf5e6;
 }
 
 .full-screen-img {
@@ -36,32 +14,35 @@ body {
     display: block;
 }
 
-/* Invisible Login Button over your Design's Button */
-.login-trigger {
-    position: absolute;
-    top: 68%;
-    left: 10%;
-    width: 80%;
-    height: 60px;
-    cursor: pointer;
-}
-
-/* Navigation Bar */
 .bottom-nav {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 70px;
+    height: 60px;
     background: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: 2px solid var(--paws-brown);
+    border-top: 1px solid #ccc;
 }
 
-.nav-item {
+.bottom-nav a {
     text-decoration: none;
-    color: var(--paws-brown);
-    font-size: 12px;
+    font-size: 24px;
+}
+
+.interactive-overlay {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
     text-align: center;
+    padding: 10px;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px dashed #4d3a2b;
+    padding: 10px;
 }
