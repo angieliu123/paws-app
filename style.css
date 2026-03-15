@@ -1,12 +1,38 @@
+/* 1. The Design Palette & Basics */
+:root {
+    --paws-cream: #fdf5e6;
+    --paws-brown: #4d3a2b;
+    --paws-orange: #f6b26b;
+    --paws-white: #ffffff;
+}
+
+body {
+    background-color: #e0e0e0; /* Background behind the phone */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* 2. The Phone Frame (Your App's Container) */
 .phone-frame {
     width: 375px;
     height: 812px;
-    margin: auto;
-    border: 10px solid #4d3a2b;
-    border-radius: 40px;
+    background-color: var(--paws-cream);
+    border: 12px solid var(--paws-brown);
+    border-radius: 45px;
     position: relative;
     overflow: hidden;
-    background: #fdf5e6;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+/* 3. Content Area (Where your images live) */
+.app-content {
+    height: calc(100% - 70px); /* Leave room for nav bar */
+    overflow-y: auto;
+    position: relative;
 }
 
 .full-screen-img {
@@ -14,35 +40,42 @@
     display: block;
 }
 
-.bottom-nav {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: 1px solid #ccc;
-}
-
-.bottom-nav a {
-    text-decoration: none;
-    font-size: 24px;
-}
-
+/* 4. Interactive Elements (The Textbox & Button) */
 .interactive-overlay {
     position: absolute;
-    bottom: 80px;
+    bottom: 40px;
     width: 100%;
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 textarea {
     width: 80%;
     height: 100px;
-    border-radius: 10px;
-    border: 1px dashed #4d3a2b;
-    padding: 10px;
+    border: 2px dashed var(--paws-brown);
+    border-radius: 15px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: inherit;
+    resize: none;
 }
+
+button {
+    background-color: var(--paws-orange);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* 5. Navigation Bar (
