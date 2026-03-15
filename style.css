@@ -1,0 +1,56 @@
+body {
+    background-color: #fdf6e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.mobile-frame {
+    width: 350px;
+    height: 650px;
+    background: #FFEDD5; /* Your light orange bg */
+    border: 4px solid #4A3728;
+    border-radius: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card {
+    background: white;
+    margin: 15px;
+    padding: 15px;
+    border: 2px dashed #4A3728;
+    border-radius: 20px;
+}
+
+.emoji-row {
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.nav-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-top: 2px solid #4A3728;
+}
+
+.send-btn {
+    background: #FFB347;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    float: right;
+    margin-top: 5px;
+}
